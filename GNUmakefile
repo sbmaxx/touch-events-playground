@@ -6,6 +6,7 @@ BEM=bem
 BEM_BUILD=$(BEM) build \
 	-l bem-bl/blocks-common/ \
 	-l bem-bl/blocks-desktop/ \
+	-l bem-bl/blocks-touch/ \
 	-l blocks/ \
 	-l $(@D)/blocks/ \
 	-d $< \

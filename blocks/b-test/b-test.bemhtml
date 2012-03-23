@@ -1,0 +1,16 @@
+block b-test {
+    js: true
+
+    content: [
+        { elem: 'container' },
+        { elem: 'container' },
+        { elem: 'links' },
+        { block: 'b-log' }
+    ]
+
+    elem links, content: [
+        { block: 'b-link', url: '../bem/bem.html', content: 'BEM!' },
+        '  ',
+        { block: 'b-link', url: '../jquery/jquery.html', content: 'jQuery' }
+    ]
+}

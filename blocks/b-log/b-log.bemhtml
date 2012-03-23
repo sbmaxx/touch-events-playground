@@ -1,0 +1,4 @@
+block b-log {
+    tag: 'ul'
+    js: true
+}
