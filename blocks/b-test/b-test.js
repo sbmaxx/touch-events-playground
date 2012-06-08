@@ -17,7 +17,7 @@
 
                 this.bindToDoc(jQueryEvents, function(e) {
 
-                    var log = [e.type, " event; tiarget: ", e.target.nodeName],
+                    var log = [e.type, " event; target: ", e.target.nodeName],
                         current = (new Date()).getTime();
 
                     time && (current - time) < 2000 && log.push('; delta: ', current - time);
