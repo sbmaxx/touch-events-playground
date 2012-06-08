@@ -9,7 +9,7 @@
             js: function() {
 
                 var logger = this.findBlockInside('b-log'),
-                    jQueryEvents = "click tap taphold swipe swipeleft swiperight scrollstart scrollstop orientationchange";
+                    jQueryEvents = "touchstart click tap taphold swipe swipeleft swiperight scrollstart scrollstop orientationchange";
 
                 this.bindToDoc(jQueryEvents, function(e) {
 
