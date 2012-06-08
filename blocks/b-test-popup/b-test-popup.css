@@ -1,0 +1,9 @@
+.b-test-popup
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #ccc;
+    left: 0;
+    top: 0;
+}
