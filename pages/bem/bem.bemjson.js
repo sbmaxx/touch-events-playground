@@ -9,7 +9,8 @@
     content: [
         {
             block: 'b-test'
-        },{
+        },
+        {
             block: 'b-test-popup',
             js: true
         }

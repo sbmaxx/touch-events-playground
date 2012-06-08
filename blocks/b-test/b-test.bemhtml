@@ -3,7 +3,6 @@ block b-test {
 
     content: [
         { elem: 'container' },
-        { elem: 'container' },
         { elem: 'links' },
         { block: 'b-log' }
     ]
