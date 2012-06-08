@@ -1,4 +1,4 @@
-/**
+/*
  * universal pointer-events plugin
  * универсальные pointer-события
  *
@@ -185,17 +185,21 @@
 
                 $(this).bind({
                     'pointerdown.tapEvent': function(e) {
-                        // если не document (например, при live-событиях), то предотвращаем мышиные события
-                        if (this.nodeType != 9) {
-                            e.preventDefault();
-                        }
-
+                        touch.target = this;
                         touch.x1 = e.pointer.x;
                     },
                     'pointermove.tapEvent': function(e) {
                         touch.x2 = e.pointer.x;
                     },
                     'pointerup.tapEvent': function(e) {
+                        // предотвращаем мышиные события
+                        if (touch.target.nodeType !== 9) {
+                            $('body').css('pointer-events', 'none');
+                            setTimeout(function() {
+                                $('body').css('pointer-events', 'auto');
+                            }, 450);
+                        }
+
                         // если совсем не было move, или был, но меньше 5 пикселей, то триггерим тап
                         if (!touch.x2 || Math.abs(touch.x2 - touch.x1) < 5) {
                             e.type = 'tap';
