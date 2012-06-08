@@ -16,7 +16,7 @@
                     var log = [e.type, " event; tiarget: ", e.target.nodeName],
                         current = (new Date()).getTime();
 
-                    time && log.push('; delta: ', current - time);
+                    time && (current - time) < 2000 && log.push('; delta: ', current - time);
                     time = current;
 
                     logger.log(log.join(''));
